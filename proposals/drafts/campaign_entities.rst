@@ -78,8 +78,9 @@ date
 jurisdiction
     Jurisdiction with at least one race occurring on this Election date.
 
-is_primary
-    Whether this Election is a primary race or not for this Jurisdiction.
+type
+    Enum containing all possible election types - primary, special, general,
+    etc. for this Jurisdiction.
 
 primary_parties_involved
     **repeated**
