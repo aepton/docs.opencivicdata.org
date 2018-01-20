@@ -235,9 +235,28 @@ id
     Open Civic Data-style ID in the format
     ``ocd-campaign-finance-committee/{{uuid}}``.
 
-committee_type
+name
+    Name of the Committee, as a string.
+
+identifiers
+    **optional**
+    Upstream IDs of the Committee if any exist, such as a filer ID assigned by the FEC.
+
+committee_types
+    **repeated**
     Type of the Committee, as a string. Presumably unique within the namespace of this Committee's
-    geographic area (opengov:area).
+    geographic area (opengov:area). A good place to stick multiple tag-like attributes -
+    `candidate`, `campaign`, `party:Democratic`, etc.
+
+officers
+    **optional**
+    **repeated**
+    A list of pairs of:
+        person
+            OCD Person
+
+        title
+            String containing the officer's title
 
 statuses
     Current status of the Committee. List of date ranges and status types
@@ -283,6 +302,10 @@ ballot_measure_options_supported
 
     option
         The specific ballot measure option supported by the committee, which are enumerated in ``BallotMeasureContest.options``.
+
+notes
+    **optional**
+    Descriptions, footnotes, clarifications, any free-text associated with this Committee.
 
 
 Candidate Designation
